@@ -23,9 +23,9 @@ include 'partials/header.php';
 ?>
 
 <div class="container">
-    <div class="row">
+    <div class="row ">
         <div class="col-md-3">
-            <form id="filter-form" method="GET" action="index.php">
+            <form id="filter-form" method="GET" action="index.php" class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">
                 <div class="mb-3">
                     <label for="category" class="form-label">Category:</label>
                     <select id="category" name="category" class="form-select">
