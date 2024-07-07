@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    margin: 0 10px;
+}
+
+input, select {
+    margin: 0 10px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+.card {
+    height: 100%;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-overlay.active {
+    display: flex;
+}
+
+.pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #000;
+}
+
+.pagination a.active {
+    font-weight: bold;
+}
