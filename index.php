@@ -74,14 +74,19 @@ include 'partials/header.php';
                                     <h5 class="card-title"><?php echo htmlspecialchars($product['name'] ?? '', ENT_QUOTES, 'UTF-8'); ?></h5>
                                     <p class="card-text">Category: <?php echo htmlspecialchars($product['category'] ?? '', ENT_QUOTES, 'UTF-8'); ?></p>
                                     <p class="card-text">Price: $<?php echo htmlspecialchars($product['price'] ?? '0.00', ENT_QUOTES, 'UTF-8'); ?></p>
-                                    <p class="card-text">Status: <?php echo htmlspecialchars($product['sales_status'] ?? '', ENT_QUOTES, 'UTF-8'); ?></p>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <p>No products found.</p>
-                <?php endif; ?>
+									<?php if ($product['sales_status'] === 'available'): ?>
+									Status: <p class="card-text text-success">Available</p>
+													<?php elseif ($product['sales_status'] === 'out_of_stock'): ?>
+									Status: <p class="card-text text-danger">Out of Stock</p>
+								<?php else: ?>
+									<p class="card-text">Status: Unknown</p>
+								<?php endif; ?>                                </div>
+											</div>
+										</div>
+									<?php endforeach; ?>
+								<?php else: ?>
+									<p>No products found.</p>
+								<?php endif; ?>
             </div>
 
             <nav>
