@@ -31,7 +31,6 @@ This project showcases an Ecommerce website developed using PHP, MySQL, and Boot
 
 ```bash
   git clone https://github.com/TeghSinghJ/e-commerce-filter.git
-  cd ecommerce-website
 
 ```
 - Set Up the Database
